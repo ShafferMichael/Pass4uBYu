@@ -8,18 +8,21 @@ def insert_str(keyword, str_to_insert, index):
     return keyword[:index] + str_to_insert + keyword[index:]
 
 
-def rank_password(password):
+def rank_password(password, keyword):
     value = 0
     for char in password:
-        if char in symbols:
+        if char in symbols:  # if special characters are in
             value += 2
         else:
             value += 1
-        if password.count(char) > 1:
+        if password.count(char) > 1:  # if duplicate symbols present
             value -= 1
+        if keyword in password:  # if the keyword is word for word in the password
+            value = 0
+
     return value
 
-    # repeating duplicates
+
 
 
 def generate(keyword, length):
@@ -35,6 +38,6 @@ def generate(keyword, length):
                 random_char = random.choice(symbols)
                 password = insert_str(password, random_char, random_int)
 
-            rank = rank_password(password)
+            rank = rank_password(password, keyword)
             passwords[password] = rank
         return passwords
