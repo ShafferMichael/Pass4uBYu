@@ -13,13 +13,16 @@ class passwordGenerator:
 
     def generate(self, keyword, length):
         spaces_to_fill = length - len(keyword)
-        symbols = list("!@#$%^&*()1234567890_-+=")
+        symbols = list("!@#$%^&*()1234567890_")
         if len(keyword) >= length:
             return -1
         else:
             for x in range(100000):
-                for x in range(spaces_to_fill):
+                for y in range(spaces_to_fill):
+                    random_int = random.randint(0, length-1)
                     random_char = random.choice(symbols)
+                    password = self.insert_str(keyword, random_char, random_int)
+
 
 
 
