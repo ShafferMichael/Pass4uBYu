@@ -2,6 +2,7 @@
 
 import PySimpleGUI as sg
 
+# Text box test
 layout = [
         [sg.Image(key="Pass4uBYu")],
         [
@@ -13,6 +14,7 @@ layout = [
         ],
     ]
 
+# Success but no text box
 layout = [
     [sg.Text("Pass4uBYu")],
     [sg.Text("Keyword: ")],
