@@ -8,7 +8,8 @@ def insert_str(keyword, str_to_insert, index):
     return keyword[:index] + str_to_insert + keyword[index:]
 
 
-def rank_password(password, keyword):
+def rank_password(password, length, keyword):
+    spaces_to_fill = length - len(keyword)
     value = 0
     for char in password:
         if char in symbols:  # if special characters are in
@@ -19,6 +20,23 @@ def rank_password(password, keyword):
             value -= 1
         if keyword in password:  # if the keyword is word for word in the password
             value = 0
+            break
+        if password.find(keyword[:2]) != -1:
+            value -= 1
+        else:
+            value += 1
+        if password.find(keyword[1:3]) != -1:
+            value -= 1
+        else:
+            value += 1
+        if keyword[0:1] != password[0:1]:
+            value -= 10
+        else:
+            value += 10
+        if keyword[len(keyword)-2:len(keyword) - 1] != password[len(password)-2:len(password) - 1]:
+            value -= 10
+        else:
+            value += 10
 
     return value
 
@@ -38,6 +56,6 @@ def generate(keyword, length):
                 random_char = random.choice(symbols)
                 password = insert_str(password, random_char, random_int)
 
-            rank = rank_password(password, keyword)
+            rank = rank_password(password, length, keyword)
             passwords[password] = rank
         return passwords
