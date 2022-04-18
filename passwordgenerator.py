@@ -18,7 +18,8 @@ class passwordGenerator:
             return -1
         else:
             for x in range(100000):
-                random_char = random.choice(symbols)
+                for x in range(spaces_to_fill):
+                    random_char = random.choice(symbols)
 
 
 
