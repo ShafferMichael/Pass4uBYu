@@ -2,23 +2,13 @@
 
 import PySimpleGUI as sg
 
-# Text box test
-layout = [
-        [sg.Image(key="Pass4uBYu")],
-        [
-            sg.Text("Keyword"),
-            sg.Input(size=(25, 1), key="-FILE-"),
-            sg.Text("Length"),
-            sg.Input(size=(25, 1), key="-FILE-"),
-            sg.Button("GENERATE"),
-        ],
-    ]
 
-# Success but no text box
 layout = [
     [sg.Text("Pass4uBYu")],
     [sg.Text("Keyword: ")],
+    [sg.Input()],
     [sg.Text("Length: ")],
+    [sg.Input()],
     [sg.Button("GENERATE")]
 ]
 
