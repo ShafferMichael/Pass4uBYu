@@ -24,8 +24,4 @@ class passwordGenerator:
                     password = self.insert_str(keyword, random_char, random_int)
 
 
-
-
-
-
-
+    def rank_password(self,):
