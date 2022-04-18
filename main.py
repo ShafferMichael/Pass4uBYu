@@ -8,5 +8,6 @@ import heapsort
 keyword = "Buddy"
 length = 11
 passwords = {}
-objectPG = passwordgenerator
-passwords = objectPG.generate(keyword, length)
+
+passwords = passwordgenerator.generate(keyword, length)
+print("debug-breakpoint")
