@@ -2,6 +2,7 @@ from queue import PriorityQueue
 
 q = PriorityQueue()
 
-def orderPasswordsPQ(passwords):
-    for x in passwords:
-        q.put(passwords)
+
+def order_passwords_PQ(passwords):
+    for key, value in passwords.items():
+        q.put(passwords[value], key)

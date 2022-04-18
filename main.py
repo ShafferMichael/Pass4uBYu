@@ -5,10 +5,11 @@ import priority_queue
 import heapsort
 
 # take in value
-keyword = "Potato"
-length = 8
+keyword = "Amazon"
+length = 11
 passwords = {}
 
 passwords = passwordgenerator.generate(keyword, length)
-pqOrder = priority_queue.orderPasswordsPQ(passwords)
+
+
 print("debug-breakpoint")
