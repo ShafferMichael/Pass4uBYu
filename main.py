@@ -8,11 +8,11 @@ import heapsort
 # take in value
 keyword = "Olivia"
 length = 11
-passwords = defaultdict(list)
+passwords_dict = defaultdict(list)
 
-passwords = passwordgenerator.generate_dict(keyword, length)
-sort_keys = passwords.items()
-new_items = sorted(sort_keys)
-print(new_items)
+passwords_dict = passwordgenerator.generate_dict(keyword, length)
+sort_keys = passwords_dict.items()
+sorted_passwords_dict = sorted(sort_keys)
+print(sorted_passwords_dict)
 
 print("debug-breakpoint")
