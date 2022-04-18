@@ -1,10 +1,13 @@
+
 import passwordgenerator
-import UI
+# import UI
 import priority_queue
 import heapsort
 
 # take in value
-keyword = "Buddy"
-length = 11
-object1 = passwordgenerator
-passwords = object1.passwordGenerator.generate(keyword, length)
+keyword = "Potato"
+length = 16
+passwords = {}
+
+passwords = passwordgenerator.generate(keyword, length)
+print("debug-breakpoint")
