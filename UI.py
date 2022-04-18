@@ -4,16 +4,18 @@ import PySimpleGUI as sg
 
 
 layout = [
-    [sg.Text("Pass4uBYu")],
-    [sg.Text("Keyword: ")],
-    [sg.Input()],
-    [sg.Text("Length: ")],
-    [sg.Input()],
-    [sg.Button("GENERATE")]
+    [sg.Text("Pass4uBYu", font=("Helvetica", 25))],
+    [sg.Text("Keyword: ", font=("Helvetica", 15))],
+    [sg.InputText()],
+    [sg.Text("Length: ", font=("Helvetica", 15))],
+    [sg.InputText()],
+    [sg.Button("GENERATE", font=("Helvetica", 15))],
+    [sg.Output()]
 ]
 
 # create the window
-window = sg.Window("Pass4uBYu", layout)
+window = sg.Window("Pass4uBYu", layout, element_justification='c')
+
 
 # create an event loop
 while True:
@@ -23,6 +25,9 @@ while True:
         break
 
     # Press generate button
+    if event == "GENERATE":
+        # Call function to display top passwords
+        break
 
 window.close()
 

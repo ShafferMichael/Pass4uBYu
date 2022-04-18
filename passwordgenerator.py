@@ -8,7 +8,7 @@ def insert_str(keyword, str_to_insert, index):
     return keyword[:index] + str_to_insert + keyword[index:]
 
 
-def rank_password(password, length, keyword):
+def rank_password(password, keyword):
     value = 0.0
     for char in password:
         if char in symbols:  # if special characters are in
@@ -54,6 +54,6 @@ def generate_dict(keyword, length):
                 random_int = random.randint(0, length - 1)
                 random_char = random.choice(symbols)
                 password = insert_str(password, random_char, random_int)
-            rank = rank_password(password, length, keyword)
+            rank = rank_password(password, keyword)
             passwords_dict[rank].append(password)
         return passwords_dict
