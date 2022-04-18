@@ -5,8 +5,8 @@ import priority_queue
 import heapsort
 
 # take in value
-keyword = "Buddy"
-length = 11
+keyword = "Potato"
+length = 16
 passwords = {}
 
 passwords = passwordgenerator.generate(keyword, length)

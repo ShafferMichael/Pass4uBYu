@@ -10,7 +10,7 @@ def insert_str(keyword, str_to_insert, index):
 
 def rank_password(password, length, keyword):
     spaces_to_fill = length - len(keyword)
-    value = 0
+    value = 0.0
     for char in password:
         if char in symbols:  # if special characters are in
             value += 2
@@ -29,14 +29,14 @@ def rank_password(password, length, keyword):
             value -= 1
         else:
             value += 1
-        if keyword[0:1] != password[0:1]:
-            value -= 10
-        else:
-            value += 10
-        if keyword[len(keyword)-2:len(keyword) - 1] != password[len(password)-2:len(password) - 1]:
-            value -= 10
-        else:
-            value += 10
+    if keyword[0:1] != password[0:1]:
+        value -= 10
+    else:
+        value += 10
+    if keyword[len(keyword)-1:len(keyword)] != password[len(password)-1:len(password)]:
+        value -= 10
+    else:
+        value += 10
 
     return value
 
