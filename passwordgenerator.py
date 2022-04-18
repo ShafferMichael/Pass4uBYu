@@ -1,6 +1,6 @@
 import random
 from collections import defaultdict
-symbols = list("!@#$%^&*()123456789_")
+symbols = list("!@#$%&*123456789_")
 passwords = defaultdict(list)
 
 
@@ -30,14 +30,14 @@ def rank_password(password, length, keyword):
             value -= 3
         else:
             value += 3
-    if keyword[0:1] != password[0:1]:
-        value -= 10
+    if keyword[0:1] == password[0:1]:
+        value += 15
     else:
-        value += 10
-    if keyword[len(keyword)-1:len(keyword)] != password[len(password)-1:len(password)]:
-        value -= 10
+        value -= 15
+    if keyword[len(keyword)-1:len(keyword)] == password[len(password)-1:len(password)]:
+        value += 15
     else:
-        value += 10
+        value -= 15
 
     return value
 
