@@ -1,7 +1,7 @@
 import random
 from collections import defaultdict
 symbols = list("!@#$%&*123456789_")
-passwords = defaultdict(list)
+passwords_dict = defaultdict(list)
 
 
 def insert_str(keyword, str_to_insert, index):
@@ -42,7 +42,7 @@ def rank_password(password, length, keyword):
     return value
 
 
-def generate(keyword, length):
+def generate_dict(keyword, length):
     spaces_to_fill = length - len(keyword)
 
     if len(keyword) >= length:
@@ -55,5 +55,5 @@ def generate(keyword, length):
                 random_char = random.choice(symbols)
                 password = insert_str(password, random_char, random_int)
             rank = rank_password(password, length, keyword)
-            passwords[rank].append(password)
-        return passwords
+            passwords_dict[rank].append(password)
+        return passwords_dict

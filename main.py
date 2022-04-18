@@ -1,3 +1,4 @@
+from collections import defaultdict
 
 import passwordgenerator
 # import UI
@@ -7,9 +8,11 @@ import heapsort
 # take in value
 keyword = "Olivia"
 length = 11
-passwords = {}
+passwords = defaultdict(list)
 
-passwords = passwordgenerator.generate(keyword, length)
-
+passwords = passwordgenerator.generate_dict(keyword, length)
+sort_keys = passwords.items()
+new_items = sorted(sort_keys)
+print(new_items)
 
 print("debug-breakpoint")
