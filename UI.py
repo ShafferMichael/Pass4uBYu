@@ -8,7 +8,7 @@ layout = [
     [sg.Text("Length: ", font=("Helvetica", 15))],
     [sg.InputText()],
     [sg.Button("GENERATE", font=("Helvetica", 15))],
-    [sg.Output()]
+    [sg.Output(size=(40, 20))]
 ]
 
 # create the window
@@ -23,7 +23,7 @@ while True:
     # this should print something here
 
 
-    # End program of user closes window
+    # End program if user closes window
 
     if event == sg.WINDOW_CLOSED:
         break
