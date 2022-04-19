@@ -4,7 +4,7 @@ import heapsort
 # import UI
 
 # take in value
-keyword = "Olivia"
+keyword = "Amazon"
 length = 11
 
 
