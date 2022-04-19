@@ -1,6 +1,5 @@
-# UI.py
-
 import PySimpleGUI as sg
+import main
 
 layout = [
     [sg.Text("Pass4uBYu", font=("Helvetica", 25))],
@@ -24,13 +23,8 @@ while True:
 
     # Press generate button
     if event == "GENERATE":
-        # this should print something here
-        print(topPasswords)
-
-        # Call function to display top passwords
-        # pass in values? values[0], values[1]?
-
+        # Print from main variable
+        for values in main.topPasswords.items():
+            print(main.topPasswords[values])
 
 window.close()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
