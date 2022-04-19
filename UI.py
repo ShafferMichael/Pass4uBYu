@@ -1,6 +1,10 @@
 # UI.py
 
+import heapsort.py
+import priority_queue.py
 import PySimpleGUI as sg
+
+def heap_sort(arr):
 
 
 layout = [
@@ -19,7 +23,7 @@ window = sg.Window("Pass4uBYu", layout, element_justification='c')
 
 # create an event loop
 while True:
-    event, values = window.read();
+    event, values = window.read()
     # End program of user closes window
     if event == sg.WINDOW_CLOSED:
         break
@@ -27,6 +31,9 @@ while True:
     # Press generate button
     if event == "GENERATE":
         # Call function to display top passwords
+        # pass in values? values[0], values[1]?
+        heapsort(values)
+        priority_queue(values)
         break
 
 window.close()
