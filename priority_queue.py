@@ -21,4 +21,3 @@ class PriorityQueue(object):
         item = self.queue[maximum]
         del self.queue[maximum]
         return item
-
