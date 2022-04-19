@@ -9,8 +9,8 @@ class PriorityQueue(object):
         return len(self.queue) == 0
 
     # insert an element in the queue
-    def insert(self, data):
-        self.queue.append(data)
+    def insert(self, key):
+        self.queue.append(key)
 
     # returning the last element of the queue
     def pop(self):
