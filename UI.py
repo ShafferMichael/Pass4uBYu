@@ -1,3 +1,4 @@
+# UI.py
 
 import PySimpleGUI as sg
 
@@ -25,7 +26,6 @@ while True:
     if event == "GENERATE":
         # this should print something here
         print(topPasswords)
-        break
 
         # Call function to display top passwords
         # pass in values? values[0], values[1]?
