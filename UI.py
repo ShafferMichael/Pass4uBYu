@@ -7,22 +7,30 @@ layout = [
     [sg.Text("Length: ", font=("Helvetica", 15))],
     [sg.InputText()],
     [sg.Button("GENERATE", font=("Helvetica", 15))],
-    [sg.Output(size=(40, 25))]
+    [sg.Output()]
 ]
 
 # create the window
 window = sg.Window("Pass4uBYu", layout, element_justification='c')
 
 # create an event loop
-while True:
-    event, values = window.read()
-    # End program of user closes window
-    if event == sg.WINDOW_CLOSED:
-        break
+def show():
+    while True:
+        event, values = window.read()
+        # End program of user closes window
+        if event == sg.WINDOW_CLOSED:
+            break
+        # Press generate button
+        if event == "GENERATE":
+         # this should print something here
+            for i in (topPasswords):
+                print(i)
+            break
 
-    # Press generate button
-    if event == "GENERATE":
-        # Print from main variable
-        print(main.topPasswords[values])
+        # Call function to display top passwords
+        # pass in values? values[0], values[1]?
+
 
 window.close()
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/

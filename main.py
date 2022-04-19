@@ -6,7 +6,10 @@ import UI
 
 # take in value
 keyword = UI.values[0]
-length = int(UI.values[1])
+length = (UI.values[1])
+UI.show() 
+#this is a wrapped function of the UI topPasswords part , have to run that part from main , to be able to have topPasswords be resolved
+
 
 
 passwords_dict = passwordgenerator.generate_dict(keyword, length)
@@ -27,4 +30,9 @@ if not (priority_queue_keys.is_empty()):
 
 topPasswords = passwords_dict[max_score_heapsort][0: 30]
 
+
 print(topPasswords)
+
+
+
+ 
