@@ -1,3 +1,4 @@
+# I took this from the class lecture/discussion slides and coded it in python
 class PriorityQueue(object):
     # constructor
     def __init__(self):
