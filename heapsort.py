@@ -1,22 +1,17 @@
-# https://www.geeksforgeeks.org/how-to-maintain-dictionary-in-a-heap-in-python/
-import heapq as hq
-import heapq
-
-
 def heapify(arr, n, i):
     largest = i  # Initialize largest as root
-    l = 2 * i + 1  # left = 2*i + 1
-    r = 2 * i + 2  # right = 2*i + 2
+    left = 2 * i + 1  # left = 2*i + 1
+    right = 2 * i + 2  # right = 2*i + 2
 
     # See if left child of root exists and is
     # greater than root
-    if l < n and arr[i] < arr[l]:
-        largest = l
+    if left < n and arr[i] < arr[left]:
+        largest = left
 
     # See if right child of root exists and is
     # greater than root
-    if r < n and arr[largest] < arr[r]:
-        largest = r
+    if right < n and arr[largest] < arr[right]:
+        largest = right
 
     # Change root, if needed
     if largest != i:

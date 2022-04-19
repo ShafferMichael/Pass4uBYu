@@ -16,10 +16,13 @@ for i in passwords_dict.keys():
     arr_of_keys.append(i)
 
 heapsort.heapSort(arr_of_keys)
-# sort_keys = passwords_dict.items()
-# sorted_passwords_dict = sorted(sort_keys)
-# print(sorted_passwords_dict)
+
+priority_queue_keys = priority_queue.PriorityQueue()
+for j in arr_of_keys:
+        priority_queue_keys.insert(j)
 
 
-# passwords_list = passwordgenerator.generate_list(keyword, length)
+
+
+
 print("debug-breakpoint")

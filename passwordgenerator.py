@@ -61,20 +61,20 @@ def generate_dict(keyword, length):
         return passwords_dict
 
 
-def generate_list(keyword, length):
-    spaces_to_fill = length - len(keyword)
-    passwords_list = [[]]
-
-    if len(keyword) >= length:
-        return -1
-    else:
-        for x in range(100000):
-            password = keyword
-            for y in range(spaces_to_fill):
-                random_int = random.randint(0, length - 1)
-                random_char = random.choice(symbols)
-                password = insert_str(password, random_char, random_int)
-            rank = rank_password(password, keyword)
-            passwords_list.append([rank, password])
-
-        return passwords_list
+# def generate_list(keyword, length):
+#     spaces_to_fill = length - len(keyword)
+#     passwords_list = [[]]
+#
+#     if len(keyword) >= length:
+#         return -1
+#     else:
+#         for x in range(100000):
+#             password = keyword
+#             for y in range(spaces_to_fill):
+#                 random_int = random.randint(0, length - 1)
+#                 random_char = random.choice(symbols)
+#                 password = insert_str(password, random_char, random_int)
+#             rank = rank_password(password, keyword)
+#             passwords_list.append([rank, password])
+#
+#         return passwords_list
