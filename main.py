@@ -30,6 +30,7 @@ if not (priority_queue_keys.is_empty()):
 
 topPasswords = passwords_dict[max_score_heapsort][0: 30]
 
+
 print(topPasswords)
 
 
