@@ -1,6 +1,10 @@
 # UI.py
 
+import heapsort.py
+import priority_queue.py
 import PySimpleGUI as sg
+
+def heap_sort(arr):
 
 
 layout = [
@@ -28,6 +32,8 @@ while True:
     if event == "GENERATE":
         # Call function to display top passwords
         # pass in values? values[0], values[1]?
+        heapsort(values)
+        priority_queue(values)
         break
 
 window.close()
