@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-import main
 
 layout = [
     [sg.Text("Pass4uBYu", font=("Helvetica", 25))],
@@ -8,7 +7,7 @@ layout = [
     [sg.Text("Length: ", font=("Helvetica", 15))],
     [sg.InputText()],
     [sg.Button("GENERATE", font=("Helvetica", 15))],
-    [sg.Output()]
+    [sg.Output(size=(40, 25))]
 ]
 
 # create the window
@@ -24,7 +23,6 @@ while True:
     # Press generate button
     if event == "GENERATE":
         # Print from main variable
-        for values in main.topPasswords.items():
-            print(main.topPasswords[values])
+        print(main.topPasswords[values])
 
 window.close()
