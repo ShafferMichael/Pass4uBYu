@@ -22,7 +22,7 @@ def heapify(arr, n, i):
 
 
 # The main function to sort an array of given size
-def heapSort(arr):
+def heap_sort(arr):
     n = len(arr)
 
     # Build a maxheap.
