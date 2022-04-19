@@ -1,25 +1,23 @@
 class PriorityQueue(object):
+    # constructor
     def __init__(self):
         self.queue = []
 
-    # for checking if the queue is empty
+    # check if queue is empty
     def is_empty(self):
         return len(self.queue) == 0
 
-    # for inserting an element in the queue
+    # insert an element in the queue
     def insert(self, data):
         self.queue.append(data)
 
-    # for popping an element based on Priority
+    # returning the last element of the queue
     def pop(self):
-        try:
-            maximum = 0
-            for i in range(len(self.queue)):
-                if self.queue[i] > self.queue[maximum]:
-                    maximum = i
-            item = self.queue[maximum]
-            del self.queue[maximum]
-            return item
-        except IndexError:
-            print()
-            exit()
+        maximum = 0
+        for i in range(len(self.queue)):
+            if self.queue[i] > self.queue[maximum]:
+                maximum = i
+        item = self.queue[maximum]
+        del self.queue[maximum]
+        return item
+
