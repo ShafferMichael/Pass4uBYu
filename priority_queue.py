@@ -1,8 +1,23 @@
-from queue import PriorityQueue
+class PriorityQueue(object):
+    # constructor
+    def __init__(self):
+        self.queue = []
 
-q = PriorityQueue()
+    # check if queue is empty
+    def is_empty(self):
+        return len(self.queue) == 0
 
+    # insert an element in the queue
+    def insert(self, data):
+        self.queue.append(data)
 
-def order_passwords_PQ(passwords):
-    for key, value in passwords.items():
-        q.put(passwords[value], key)
+    # returning the last element of the queue
+    def pop(self):
+        maximum = 0
+        for i in range(len(self.queue)):
+            if self.queue[i] > self.queue[maximum]:
+                maximum = i
+        item = self.queue[maximum]
+        del self.queue[maximum]
+        return item
+
