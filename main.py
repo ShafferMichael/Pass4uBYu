@@ -1,15 +1,11 @@
 import passwordgenerator
 import priority_queue
 import heapsort
-
 import UI
 
 # take in value
 keyword = UI.values[0]
-length = (UI.values[1])
-UI.show() 
-#this is a wrapped function of the UI topPasswords part , have to run that part from main , to be able to have topPasswords be resolved
-
+length = int(UI.values[1])
 
 
 passwords_dict = passwordgenerator.generate_dict(keyword, length)
@@ -29,10 +25,11 @@ if not (priority_queue_keys.is_empty()):
     max_score_priority_queue = priority_queue_keys.pop()
 
 topPasswords = passwords_dict[max_score_heapsort][0: 30]
-
-
 print(topPasswords)
+print(".")
+# a = topPasswords
+# s = '\n'.join([str(i) for i in a])  # pass the string instead of an array.
+# UI.sg.Output("Synchronization completed", f"The following items have been added: \n", f"{s}")
 
 
 
- 
