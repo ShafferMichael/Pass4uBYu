@@ -25,8 +25,6 @@ print(end - start)
 start = time.time()
 arr_of_keys = list(passwords_dict.keys())
 
-    
-
 heapsort.heap_sort(arr_of_keys)
 
 max_score_heapsort = arr_of_keys[-1]
