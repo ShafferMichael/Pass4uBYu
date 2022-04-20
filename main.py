@@ -23,13 +23,13 @@ print("Password Generator time: ")
 print(end - start)
 
 start = time.time()
-arr_of_keys = list()
-for i in passwords_dict.keys():
-    arr_of_keys.append(i)
+arr_of_keys = list(passwords_dict.keys())
+
+    
 
 heapsort.heap_sort(arr_of_keys)
 
-max_score_heapsort = arr_of_keys[len(arr_of_keys) - 1]
+max_score_heapsort = arr_of_keys[-1]
 end = time.time()
 print("Heapsort time: ")
 print(end - start)
