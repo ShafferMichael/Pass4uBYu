@@ -1,6 +1,4 @@
 
-
-
 # I took this from the class lecture/discussion slides and coded it in python
 def heapify(key_list, length, i):
     maximum = i  # Initialize maximum as root
@@ -36,6 +34,3 @@ def heap_sort(key_list):
     for i in range(length - 1, 0, -1):
         key_list[i], key_list[0] = key_list[0], key_list[i]  # swap - position current root to end
         heapify(key_list, i, 0)  # max heapify on the reduced heap
-
-
-

@@ -3,7 +3,6 @@ import priority_queue
 import heapsort
 import time
 
-
 # take in value
 keyword = input("\nEnter a keyword you'd like your password based around: ")
 inputVar = True
@@ -30,12 +29,10 @@ for i in passwords_dict.keys():
 
 heapsort.heap_sort(arr_of_keys)
 
-
 max_score_heapsort = arr_of_keys[len(arr_of_keys) - 1]
 end = time.time()
 print("Heapsort time: ")
 print(end - start)
-
 
 start = time.time()
 priority_queue_keys = priority_queue.PriorityQueue()
@@ -52,10 +49,4 @@ print(end - start)
 topPasswords = passwords_dict[max_score_heapsort][0: 30]
 
 print("\nThe top passwords are: ")
-print(*topPasswords, sep = "\n")
-# a = topPasswords
-# s = '\n'.join([str(i) for i in a])  # pass the string instead of an array.
-# UI.sg.Output("Synchronization completed", f"The following items have been added: \n", f"{s}")
-
-
-
+print(*topPasswords, sep="\n")

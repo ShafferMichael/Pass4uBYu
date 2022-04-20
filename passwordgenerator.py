@@ -1,8 +1,6 @@
 import random
 from collections import defaultdict
 
-
-
 symbols = list("!@#$%&*123456789_")
 passwords_dict = defaultdict(list)
 
@@ -37,7 +35,7 @@ def rank_password(password, keyword):
         value += 15
     else:
         value -= 15
-    if keyword[len(keyword)-1:len(keyword)] == password[len(password)-1:len(password)]:
+    if keyword[len(keyword) - 1:len(keyword)] == password[len(password) - 1:len(password)]:
         value += 15
     else:
         value -= 15
@@ -61,9 +59,6 @@ def generate_dict(keyword, length):
             passwords_dict[rank].append(password)
 
         return passwords_dict
-
-
-
 
 # def generate_list(keyword, length):
 #     spaces_to_fill = length - len(keyword)

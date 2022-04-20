@@ -1,6 +1,4 @@
 
-
-
 # I took this from the class lecture/discussion slides and coded it in python
 class PriorityQueue(object):
     # constructor
@@ -24,5 +22,3 @@ class PriorityQueue(object):
         item = self.queue[maximum]
         del self.queue[maximum]
         return item
-
-
