@@ -1,6 +1,9 @@
 import random
 from collections import defaultdict
 
+import time
+start = time.time()
+
 symbols = list("!@#$%&*123456789_")
 passwords_dict = defaultdict(list)
 
@@ -60,6 +63,11 @@ def generate_dict(keyword, length):
 
         return passwords_dict
 
+
+end = time.time()
+
+print("Password Generator time: ")
+print(end - start)
 
 # def generate_list(keyword, length):
 #     spaces_to_fill = length - len(keyword)
