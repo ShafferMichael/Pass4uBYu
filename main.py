@@ -1,11 +1,19 @@
 import passwordgenerator
 import priority_queue
 import heapsort
-import UI
+# import UI
 
 # take in value
-keyword = UI.values[0]
-length = int(UI.values[1])
+keyword = input("Enter a keyword you'd like your password based around: ")
+inputVar = True
+while inputVar:
+    length = int(input("Enter a number greater than 12: "))
+    if length >= 12:
+        break
+    else:
+        print("Try again (enter a string for keyword and an integer greater than or equal to 12 for length.")
+
+
 
 
 passwords_dict = passwordgenerator.generate_dict(keyword, length)
@@ -25,8 +33,9 @@ if not (priority_queue_keys.is_empty()):
     max_score_priority_queue = priority_queue_keys.pop()
 
 topPasswords = passwords_dict[max_score_heapsort][0: 30]
-print(topPasswords)
-print(".")
+
+
+print(*topPasswords, sep = "\n")
 # a = topPasswords
 # s = '\n'.join([str(i) for i in a])  # pass the string instead of an array.
 # UI.sg.Output("Synchronization completed", f"The following items have been added: \n", f"{s}")

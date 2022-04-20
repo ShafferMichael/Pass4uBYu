@@ -1,4 +1,3 @@
-
 import PySimpleGUI as sg
 
 layout = [
@@ -19,8 +18,8 @@ while True:
     event, values = window.read()
     import main
     # Press generate button
-    # if event == "GENERATE":
-    # this should print something here
+    if event == "GENERATE":
+
 
 
     # End program of user closes window
