@@ -3,7 +3,7 @@ import priority_queue
 import heapsort
 import time
 
-# take in value
+### take in value ###
 keyword = input("\nEnter a keyword you'd like your password based around: ")
 inputVar = True
 while inputVar:
@@ -15,12 +15,15 @@ while inputVar:
 
 print("\n")
 
+### start timer for password generator ###
 start = time.time()
 passwords_dict = passwordgenerator.generate_dict(keyword, length)
 end = time.time()
 
 print("Password Generator time: ")
 print(end - start)
+
+### start timer for heapsort ###
 
 start = time.time()
 arr_of_keys = list(passwords_dict.keys())
@@ -32,6 +35,7 @@ end = time.time()
 print("Heapsort time: ")
 print(end - start)
 
+### start timer for priority queue ###
 start = time.time()
 priority_queue_keys = priority_queue.PriorityQueue()
 for j in arr_of_keys:
@@ -44,7 +48,9 @@ end = time.time()
 print("Priority Queue time: ")
 print(end - start)
 
+### grab top 30 from passwords_dict ###
 topPasswords = passwords_dict[max_score_heapsort][0: 30]
 
+### print top 30 passwords ###
 print("\nThe top passwords are: ")
 print(*topPasswords, sep="\n")
