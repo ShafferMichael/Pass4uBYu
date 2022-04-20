@@ -19,10 +19,7 @@ while True:
     import main
     # Press generate button
     if event == "GENERATE":
-
-
-
-    # End program of user closes window
+        break
 
     if event == sg.WINDOW_CLOSED:
         break

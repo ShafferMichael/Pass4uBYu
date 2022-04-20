@@ -1,5 +1,4 @@
-import time
-start = time.time()
+
 
 
 # I took this from the class lecture/discussion slides and coded it in python
@@ -39,7 +38,4 @@ def heap_sort(key_list):
         heapify(key_list, i, 0)  # max heapify on the reduced heap
 
 
-end = time.time()
 
-print("Heapsort time: ")
-print(end - start)

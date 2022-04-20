@@ -1,5 +1,4 @@
-import time
-start = time.time()
+
 
 
 # I took this from the class lecture/discussion slides and coded it in python
@@ -27,7 +26,3 @@ class PriorityQueue(object):
         return item
 
 
-end = time.time()
-
-print("Priority Queue time: ")
-print(end - start)
